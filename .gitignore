@@ -5,6 +5,11 @@ __pycache__/
 *.py[cod]
 *$py.class
 
+### Mercurial template
+/.hg/*
+*/.hg/*
+.hgignore
+
 # C extensions
 *.so
 

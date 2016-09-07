@@ -10,6 +10,7 @@ setup(
         url='https://github.com/___github___',
         download_url='https://github.com/___github___/tarball/master',
         license='http://opensource.org/licenses/MIT',
+        test_suite="tests",
         author='___author___',
         zip_safe=False,
         author_email='___email___',
