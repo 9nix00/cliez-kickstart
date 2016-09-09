@@ -9,7 +9,7 @@ setup(
         packages=find_packages(exclude=["tests"]),
         url='https://github.com/___github___',
         download_url='https://github.com/___github___/tarball/master',
-        license='http://opensource.org/licenses/MIT',
+        license='MIT',
         test_suite="tests",
         author='___author___',
         zip_safe=False,
