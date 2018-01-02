@@ -6,7 +6,7 @@ class DemoComponent(Component):
     # exclude_global_option = True
 
     def run(self, options):
-        print(options)
+        self.print_message('database config is %s' % self.settings.DATABASE)
         pass
 
     @classmethod
