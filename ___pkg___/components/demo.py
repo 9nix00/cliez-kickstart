@@ -1,5 +1,3 @@
-# -*- coding: utf-8 -*-
-
 from cliez.component import Component
 
 
@@ -18,7 +16,8 @@ class DemoComponent(Component):
         """
         return [
             (('hello',), dict(help='require argument')),
-            (('world',), dict(nargs='?', default='world', help='optional argument')),
+            (('world',),
+             dict(nargs='?', default='world', help='optional argument')),
             (('--bool',), dict(action='store_true', help='a bool value.')),
         ]
         pass

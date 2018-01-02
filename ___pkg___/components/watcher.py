@@ -1,7 +1,8 @@
 # -*- coding: utf-8 -*-
 
-from cliez.slot import SlotComponent
 import threading
+
+from cliez.slot import SlotComponent
 
 
 class WatcherComponent(SlotComponent):
@@ -21,13 +22,17 @@ class WatcherComponent(SlotComponent):
 
         def __enter__(self):
             if not self.todo_list:
-                self.component.print_message("{}:No todo data found, waiting {}s...".format(threading.current_thread().name, self.options.sleep))
+                self.component.print_message(
+                    "{}:No todo data found, waiting {}s...".format(
+                        threading.current_thread().name, self.options.sleep))
                 return False
             else:
                 return self.todo_list.pop()
 
         def slot(self, msg):
-            self.component.print_message("{}:Get todo id:{}".format(threading.current_thread().name, msg))
+            self.component.print_message(
+                "{}:Get todo id:{}".format(threading.current_thread().name,
+                                           msg))
             pass
 
         pass
@@ -38,7 +43,8 @@ class WatcherComponent(SlotComponent):
         a watcher for service
         """
         return [
-            (('--small',), dict(action='store_true', help='set list from 0 to 10'))
+            (('--small',),
+             dict(action='store_true', help='set list from 0 to 10'))
         ]
 
     pass
