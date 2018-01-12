@@ -12,8 +12,15 @@ conf.GENERAL_ARGUMENTS = [
     (('--debug',), dict(action='store_true', help='open debug mode')),
     (('--verbose', '-v'), dict(action='count')),
     (('--settings', '-S'), dict(default='___pkg___.settings.dev',
-                                help='user settings module')),
+                                help='user settings module,'
+                                     'default is `___pkg___.settings.dev`')),
 ]
+
+conf.LOGGING_CONFIG['loggers']['___pkg___'] = {
+    'handlers': ['stderr'],
+    'propagate': True,
+}
+
 conf.EPILOG = 'You can submit issues at: https://www.github.com/___github___'
 
 
