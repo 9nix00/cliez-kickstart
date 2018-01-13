@@ -6,6 +6,12 @@ from cliez.slot import SlotComponent
 
 
 class WatcherComponent(SlotComponent):
+    """
+    .. deprecated 0.99::
+
+        for python 3,we suggest you use `concurrent.futures`
+
+    """
     # un-comment this can disable global options
     # exclude_global_option = True
 
